@@ -8,10 +8,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #4a5568;
-    background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 50%, #cbd5e0 100%);
+    color: #ffffff; /* White text for contrast */
+  background: linear-gradient(135deg, #1a1a2e 0%, #3b0764 50%, #000000 100%);
+
+
     min-height: 100vh;
 }
+
 
 .container {
     max-width: 1200px;
