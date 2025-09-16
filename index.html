@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-volume-up"></i> <strong>Text-to-Speech</strong></h1>
+            <p>Transform your text into natural speech</p>
+        </header>
+
+        <main class="main-content">
+            <div class="tts-container">
+                <div class="input-section">
+                    <label for="text-input">Enter Text to Speak:</label>
+                    <textarea 
+                        id="text-input" 
+                        placeholder="Type or paste your text here..."
+                        rows="6"
+                    >Welcome to our Text-to-Speech Demo! This application can convert any text into natural speech using the Web Speech API.</textarea>
+                </div>
+
+                <div class="controls-section">
+                    <div class="voice-controls">
+                        <div class="control-group">
+                            <label for="voice-select">Voice:</label>
+                            <select id="voice-select">
+                                <option>Loading voices...</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="rate-slider">Speed: <span id="rate-value">1</span></label>
+                            <input type="range" id="rate-slider" min="0.1" max="3" step="0.1" value="1">
+                        </div>
+
+                        <div class="control-group">
+                            <label for="pitch-slider">Pitch: <span id="pitch-value">1</span></label>
+                            <input type="range" id="pitch-slider" min="0" max="2" step="0.1" value="1">
+                        </div>
+
+                        <div class="control-group">
+                            <label for="volume-slider">Volume: <span id="volume-value">1</span></label>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="speak-btn" class="btn primary">
+                            <i class="fas fa-play"></i> Speak
+                        </button>
+                        <button id="pause-btn" class="btn secondary" disabled>
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button id="resume-btn" class="btn secondary" disabled>
+                            <i class="fas fa-play"></i> Resume
+                        </button>
+                        <button id="stop-btn" class="btn danger" disabled>
+                            <i class="fas fa-stop"></i> Stop
+                        </button>
+                        <button id="clear-btn" class="btn outline">
+                            <i class="fas fa-trash"></i> Clear Text
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-section">
+                    <div class="status-indicator">
+                        <span id="status-text">Ready to speak</span>
+                        <div class="progress-bar">
+                            <div id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="presets-section">
+                    <h3>Quick Text Examples:</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-text="Hello! Welcome to our text-to-speech demonstration.">
+                            <i class="fas fa-hand-wave"></i> Greeting
+                        </button>
+                        <button class="preset-btn" data-text="The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet.">
+                            <i class="fas fa-font"></i> Pangram
+                        </button>
+                        <button class="preset-btn" data-text="Technology is advancing rapidly, and artificial intelligence is becoming more sophisticated every day.">
+                            <i class="fas fa-robot"></i> Tech Talk
+                        </button>
+                        <button class="preset-btn" data-text="Once upon a time, in a land far away, there lived a brave knight who embarked on an epic adventure.">
+                            <i class="fas fa-book"></i> Story
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-microphone"></i>
+                    <span>Natural Voice Synthesis</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Customizable Controls</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-universal-access"></i>
+                    <span>Accessibility Friendly</span>
+                </div>
+            </div>
+            <p>&copy; 2025 Text-to-Speech. Built with Web Speech API.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
